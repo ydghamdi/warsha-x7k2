@@ -920,7 +920,7 @@ const LS_KEY = "muraja_faris_v18";
   function go(){
     let ok=false; try{ok=(pin.value.trim()===atob(PIN_B64));}catch(e){}
     if(ok){gate.classList.add("hidden");}
-    else{err.textContent="الرقم غير صحيح — حاول مرة أخرى";box.classList.remove("shake");void box.offsetWidth;box.classList.add("shake");pin.value="";pin.focus();}
+    else{err.textContent="الرقم تم تغييره  — أطلبه مرة أخرى";box.classList.remove("shake");void box.offsetWidth;box.classList.add("shake");pin.value="";pin.focus();}
   }
   btn.addEventListener("click",go);
   pin.addEventListener("keydown",e=>{if(e.key==="Enter")go();});
