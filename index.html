@@ -4,80 +4,80 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>مراجعة مشروع نظام الورشة</title>
+<title>استيضاحات ما قبل التنفيذ</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0c141f;--surface:rgba(255,255,255,.045);--surface2:rgba(255,255,255,.08);
---border:rgba(255,255,255,.10);--text:#e8eef5;--muted:#93a3b5;--teal:#2dd4bf;--amber:#f5a623;--green:#4ade80;--r:16px}
+--border:rgba(255,255,255,.10);--text:#e8eef5;--muted:#93a3b5;--teal:#2dd4bf;--amber:#f5a623;--green:#4ade80;--red:#f87171;--r:16px}
 *{box-sizing:border-box;margin:0;padding:0}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 body{font-family:'Tajawal',system-ui,sans-serif;color:var(--text);min-height:100vh;padding-bottom:150px;
 background:radial-gradient(1100px 600px at 85% -10%,rgba(45,212,191,.10),transparent 60%),
 radial-gradient(900px 500px at 0% 100%,rgba(245,166,35,.07),transparent 55%),var(--bg)}
-.wrap{max-width:760px;margin:0 auto;padding:0 14px}
-header{padding:32px 0 8px;text-align:center}
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+header{padding:34px 0 8px;text-align:center}
 .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;color:var(--amber);
 border:1px solid rgba(245,166,35,.35);border-radius:999px;padding:4px 14px;margin-bottom:12px}
-h1{font-size:1.45rem;font-weight:800;line-height:1.5}
+h1{font-size:1.5rem;font-weight:800;line-height:1.5}
 h1 span{color:var(--teal)}
-.intro-note{color:var(--muted);font-size:.92rem;line-height:1.9;margin:10px 0 4px}
+.intro{color:var(--muted);font-size:.93rem;line-height:1.9;margin-top:10px}
 .progress-bar{position:sticky;top:0;z-index:50;background:rgba(12,20,31,.9);backdrop-filter:blur(10px);
-border-bottom:1px solid var(--border);padding:10px 14px}
-.pi{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:12px}
+border-bottom:1px solid var(--border);padding:10px 16px}
+.pi{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:12px}
 .pt{flex:1;height:8px;background:var(--surface2);border-radius:999px;overflow:hidden}
 .pf{height:100%;width:0%;background:linear-gradient(90deg,var(--teal),var(--amber));border-radius:999px;transition:width .3s}
 .pl{font-size:.8rem;font-weight:700;color:var(--muted);white-space:nowrap}
 .pl b{color:var(--teal)}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);
-padding:16px 14px;margin:16px 0;position:relative;overflow:hidden}
+padding:18px 16px;margin:14px 0;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;inset-inline-start:0;top:0;bottom:0;width:4px;background:var(--surface2)}
-.card.approved::before{background:var(--green)}
-.card.noted::before{background:var(--amber)}
-.card.approved.noted::before{background:linear-gradient(var(--green) 50%,var(--amber) 50%)}
-.sec-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.sec-num{flex-shrink:0;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
-font-weight:800;font-size:.85rem;background:var(--surface2);border:1px solid var(--border);color:var(--muted)}
-.card.approved .sec-num{background:rgba(74,222,128,.14);color:var(--green);border-color:rgba(74,222,128,.35)}
-.sec-head h2{font-size:1.05rem;font-weight:800;color:var(--teal)}
-.sec-body{font-size:.92rem;line-height:2;color:var(--text)}
-.sec-body h3{color:var(--amber);font-size:.98rem;margin:14px 0 6px}
-.sec-body p{margin:8px 0}
-.sec-body ul,.sec-body ol{margin:8px 22px 8px 0}
-.sec-body li{margin:5px 0}
-.sec-body strong{color:#fff}
-.sec-body del{color:var(--muted)}
-.sec-body pre,.sec-body code{font-family:'Tajawal',monospace;font-size:.85rem;background:rgba(0,0,0,.3);
-border:1px solid var(--border);border-radius:10px;white-space:pre-wrap;word-break:break-word}
-.sec-body pre{padding:12px}
-.twrap{overflow-x:auto;margin:10px 0;border:1px solid var(--border);border-radius:10px}
-.sec-body table{border-collapse:collapse;width:100%;min-width:480px;font-size:.86rem}
-.sec-body th{background:rgba(45,212,191,.12);color:var(--teal);font-weight:700;padding:9px;text-align:right}
-.sec-body td{padding:9px;border-top:1px solid var(--border);vertical-align:top;line-height:1.9}
-.sec-actions{display:flex;gap:8px;margin-top:14px}
-.sec-actions button{font-family:inherit;font-weight:700;font-size:.88rem;border-radius:10px;
-padding:9px 16px;cursor:pointer;min-height:42px;border:1px solid var(--border);background:var(--surface2);color:var(--text)}
-.card.approved .btn-approve{background:rgba(74,222,128,.16);border-color:rgba(74,222,128,.45);color:var(--green)}
-.card.noted .btn-note{background:rgba(245,166,35,.16);border-color:rgba(245,166,35,.45);color:var(--amber)}
-.note-box{display:none;margin-top:10px}
-.note-box.show{display:block}
-.note-box textarea{width:100%;min-height:88px;background:rgba(0,0,0,.3);border:1px solid rgba(245,166,35,.4);
-border-radius:10px;color:var(--text);font-family:inherit;font-size:.92rem;line-height:1.8;padding:10px;resize:vertical}
-.note-box textarea:focus{outline:none;border-color:var(--amber)}
+.card.answered::before{background:var(--green)}
+.q-head{display:flex;gap:10px;margin-bottom:6px;align-items:flex-start}
+.q-num{flex-shrink:0;width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+font-weight:800;font-size:.88rem;background:var(--surface2);border:1px solid var(--border);color:var(--muted)}
+.card.answered .q-num{background:rgba(74,222,128,.14);color:var(--green);border-color:rgba(74,222,128,.35)}
+.q-title{font-weight:700;font-size:1rem;line-height:1.7}
+.q-hint{color:var(--muted);font-size:.83rem;line-height:1.8;margin:2px 0 12px;padding-inline-start:40px}
+.options{display:flex;flex-direction:column;gap:8px;padding-inline-start:40px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt label{display:flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid var(--border);
+border-radius:12px;padding:11px 14px;cursor:pointer;font-size:.93rem;line-height:1.6;min-height:46px;transition:border-color .15s,background .15s}
+.opt .mark{flex-shrink:0;width:20px;height:20px;border-radius:50%;border:2px solid var(--muted);display:grid;place-items:center;transition:all .15s}
+.opt.multi .mark{border-radius:6px}
+.opt .mark::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--bg);transform:scale(0);transition:transform .15s}
+.opt.multi .mark::after{border-radius:2px}
+.opt input:checked + label{border-color:var(--teal);background:rgba(45,212,191,.10)}
+.opt input:checked + label .mark{border-color:var(--teal);background:var(--teal)}
+.opt input:checked + label .mark::after{transform:scale(1)}
+.opt input:focus-visible + label{outline:2px solid var(--teal);outline-offset:2px}
+.opt .rec{font-size:.72rem;font-weight:700;color:var(--green);background:rgba(74,222,128,.12);
+border:1px solid rgba(74,222,128,.3);border-radius:999px;padding:2px 9px;margin-inline-start:auto;white-space:nowrap}
+.inputs{display:flex;flex-direction:column;gap:8px;padding-inline-start:40px;margin-top:10px}
+.field label{display:block;font-size:.8rem;color:var(--muted);margin-bottom:5px}
+.field input[type=text],.field textarea{width:100%;background:rgba(0,0,0,.25);border:1px solid var(--border);
+border-radius:10px;color:var(--text);font-family:inherit;font-size:.93rem;padding:10px 12px}
+.field textarea{min-height:80px;resize:vertical;line-height:1.7}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal)}
+.other-box{display:none;margin-top:8px}
+.other-box.show{display:block}
 .send-panel{margin-top:34px;background:linear-gradient(135deg,rgba(45,212,191,.10),rgba(245,166,35,.08));
-border:1px solid rgba(45,212,191,.30);border-radius:var(--r);padding:20px 16px;text-align:center}
-.send-panel h2{font-size:1.1rem;font-weight:800;margin-bottom:6px}
-.send-panel p{color:var(--muted);font-size:.86rem;line-height:1.9;margin-bottom:14px}
+border:1px solid rgba(45,212,191,.30);border-radius:var(--r);padding:22px 18px;text-align:center}
+.send-panel h2{font-size:1.15rem;font-weight:800;margin-bottom:6px}
+.send-panel p{color:var(--muted);font-size:.87rem;line-height:1.9;margin-bottom:16px}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 button.btn{font-family:inherit;font-weight:700;font-size:.95rem;border:none;border-radius:12px;
-padding:13px 20px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px}
+padding:13px 22px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px}
 .btn-wa{background:#25D366;color:#06281a}
 .btn-copy{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
 .btn-view{background:transparent;color:var(--teal);border:1px dashed rgba(45,212,191,.4)}
-.preview{display:none;margin-top:14px;text-align:start}
+.missing-note{display:none;color:var(--amber);font-size:.84rem;margin-top:12px;line-height:1.8}
+.missing-note.show{display:block}
+.preview{display:none;margin-top:16px;text-align:start}
 .preview.show{display:block}
 .preview pre{white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.35);border:1px solid var(--border);
-border-radius:12px;padding:13px;font-family:inherit;font-size:.84rem;line-height:1.9;max-height:320px;overflow:auto}
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);
+border-radius:12px;padding:14px;font-family:inherit;font-size:.85rem;line-height:1.9;max-height:320px;overflow:auto}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);
 color:#06281a;font-weight:700;font-size:.9rem;padding:11px 22px;border-radius:999px;opacity:0;transition:all .3s;z-index:100;pointer-events:none}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 footer{text-align:center;color:var(--muted);font-size:.78rem;margin-top:28px;line-height:1.8}
@@ -92,7 +92,7 @@ font-family:inherit;font-size:1.4rem;font-weight:700;letter-spacing:.4em;text-al
 .gate-box input:focus{outline:none;border-color:var(--teal)}
 .gate-box button{margin-top:14px;width:100%;font-family:inherit;font-weight:700;font-size:1rem;
 background:var(--teal);color:#06281f;border:none;border-radius:12px;padding:13px;cursor:pointer;min-height:48px}
-.gate-error{color:#f87171;font-size:.84rem;margin-top:10px;min-height:1.4em}
+.gate-error{color:var(--red);font-size:.84rem;margin-top:10px;min-height:1.4em}
 .gate-box.shake{animation:shake .35s}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}
 </style>
@@ -102,8 +102,8 @@ background:var(--teal);color:#06281f;border:none;border-radius:12px;padding:13px
 <div class="gate" id="gate">
   <div class="gate-box" id="gateBox">
     <div class="lock">🔒</div>
-    <h2>مستند خاص</h2>
-    <p>هذه الصفحة مخصصة لصاحبها.<br>أدخل الرقم السري الذي وصلك في واتساب.</p>
+    <h2>صفحة خاصة</h2>
+    <p>أدخل الرقم السري الذي وصلك في واتساب.</p>
     <input type="text" id="gatePin" inputmode="numeric" autocomplete="off" maxlength="8" placeholder="••••" aria-label="الرقم السري">
     <button id="gateBtn">دخول</button>
     <div class="gate-error" id="gateError"></div>
@@ -111,797 +111,33 @@ background:var(--teal);color:#06281f;border:none;border-radius:12px;padding:13px
 </div>
 
 <div class="progress-bar"><div class="pi">
-  <div class="pt"><div class="pf" id="pf"></div></div>
-  <div class="pl">راجعتَ <b id="pc">0</b> من <span id="ptot">0</span> قسمًا</div>
+  <div class="pt"><div class="pf" id="pfill"></div></div>
+  <div class="pl"><b id="pcount">0</b> من <span id="ptotal">0</span></div>
 </div></div>
 
 <div class="wrap">
 <header>
-  <span class="eyebrow">للمراجعة والاعتماد</span>
-  <h1>مشروع نظام <span>ورشة المعلمين</span></h1>
-  <p class="intro-note">فارس، هذا مشروع نظامك كاملًا. اقرأ كل قسم ثم اضغط <b style="color:var(--green)">👍 معتمد</b> إن وافقت،
-  أو <b style="color:var(--amber)">✍️ ملاحظة</b> لتكتب رأيك — وملاحظاتك تُحفظ تلقائيًا في جهازك.
-  وفي النهاية زر واحد يرسل كل شيء واتساب.</p>
+  <span class="eyebrow">الخطوة الأخيرة قبل البدء بالبناء</span>
+  <h1>استيضاحات <span>فارس</span> النهائية</h1>
+  <p class="intro">فارس، اعتمادك وصل كاملًا وشكرًا لثقتك 🌟<br>
+  بقيت 6 نقاط قصيرة نتأكد فيها أننا فهمنا ملاحظاتك بالضبط — دقيقتان وننطلق للتنفيذ مباشرة.</p>
 </header>
 
-
-<section class="card" data-sec="1" id="sec1">
-  <div class="sec-head">
-    <span class="sec-num">1</span>
-    <h2>1. الملخص التنفيذي</h2>
-  </div>
-  <div class="sec-body">
-<p>نظام رقمي سحابي متكامل لإدارة دورة العمل في ورشة صيانة السيارات، يعمل على جميع الأجهزة من المتصفح — الكمبيوتر والجوال والأجهزة اللوحية (وتجربته على التابلت والكمبيوتر هي الأرحب) — بياناته محفوظة في تخزين سحابي آمن، مع قدرة على مواصلة العمل عند الانقطاع اللحظي للإنترنت ومزامنة تلقائية فور عودته. الهدف الجوهري ليس الأتمتة فحسب، بل <strong>الحوكمة</strong>: منع التلاعب بالأسعار، توثيق كل خطوة، واحتساب نسب الفنيين آليًا من بيانات لا يمكن العبث بها.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="1">👍 معتمد</button>
-    <button class="btn-note" data-sec="1">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note1">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="1"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="2" id="sec2">
-  <div class="sec-head">
-    <span class="sec-num">2</span>
-    <h2>2. المشكلة والأهداف</h2>
-  </div>
-  <div class="sec-body">
-<h3>المشكلة</h3>
-<ul>
-<li>الفنيون يعملون بنظام النسبة، مع إمكانية التلاعب بالأسعار أو تجاوزات لا يعلم بها المالك.</li>
-<li>النظام الحالي تطبيق مخصص للمطاعم، لا يناسب طبيعة عمل الورشة.</li>
-<li>لا يوجد توثيق منهجي لحالة السيارة قبل الإصلاح وبعده.</li>
-</ul>
-<h3>الأهداف</h3>
-<ol>
-<li>كتالوج أسعار مرجعي مركزي بيد المالك — مع قدرته على توسيع صلاحية إدارته للمشرف عبر مفاتيح التفويض متى شاء.</li>
-<li>دورة عمل إلزامية (State Machine) لا يمكن القفز بين مراحلها.</li>
-<li>سجل تدقيق كامل وغير قابل للحذف لكل التعديلات.</li>
-<li>احتساب نسب الفنيين آليًا من البنود المعتمدة فقط.</li>
-<li>توثيق مصوّر لحالة المركبة قبل الإصلاح وبعده.</li>
-<li>ملف دائم لكل عميل ولكل مركبة (بالشاصيه كمعرّف فريد).</li>
-<li>تخزين سحابي آمن، مع مواصلة العمل عند الانقطاع اللحظي للإنترنت ومزامنة تلقائية فور عودته.</li>
-</ol>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="2">👍 معتمد</button>
-    <button class="btn-note" data-sec="2">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note2">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="2"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="3" id="sec3">
-  <div class="sec-head">
-    <span class="sec-num">3</span>
-    <h2>2-ب. قرارات معتمدة من المالك (استبيان وتوضيحات 11 يوليو 2026)</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>الموضوع</th>
-<th>القرار المعتمد</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>عمولة الفني</td>
-<td>من الصافي <strong>بعد الخصم</strong>، وعلى <strong>أجور العمل (اليد) فقط</strong> دون القطع</td>
-</tr>
-<tr>
-<td>نسبة العمولة</td>
-<td><strong>40% افتراضية للجميع</strong>، وتُعدَّل لكل فني على حدة من لوحة التحكم</td>
-</tr>
-<tr>
-<td>استراتيجية التسعير</td>
-<td>سعر الكتالوج <strong>مرجع لا سقف</strong>: يجوز عرض سعر أعلى للعميل ثم منحه «خصمًا خاصًا» لكسبه — فلا يتضرر صافي الفني. النظام يسجل دائمًا: سعر الكتالوج / السعر المعروض / الصافي بعد الخصم</td>
-</tr>
-<tr>
-<td>سقوف الخصم</td>
-<td>افتراضيًا: كاشير 15%، مدير 40% — <strong>قابلة للتعديل من لوحة التحكم</strong> (بيد المالك فقط، وكل تغيير مسجّل في التدقيق)</td>
-</tr>
-<tr>
-<td>عدّاد التأخير</td>
-<td><strong>يتوقف</strong> أثناء «بانتظار اعتماد العميل» و«بانتظار قطع غيار»</td>
-</tr>
-<tr>
-<td>مستخدمو الانطلاق</td>
-<td><strong>فارس والمشرف فقط</strong> — الفنيون بلا حسابات ولا أجهزة في MVP؛ المشرف يسجّل نيابة عنهم، ودور الفني يبقى جاهزًا في التصميم للتفعيل لاحقًا</td>
-</tr>
-<tr>
-<td>الأجهزة</td>
-<td>كمبيوتر واحد عند الكاشير + جوالان → واجهة <strong>سطح مكتب أولًا</strong> للكاشير وواجهة <strong>جوال</strong> للمشرف (لا تابلت حاليًا)</td>
-</tr>
-<tr>
-<td>الإنترنت</td>
-<td>نادر الانقطاع (مرة بالشهر أو أقل) → <strong>قرار PWA نهائي</strong>، والراوتر الاحتياطي اختياري غير مستعجل</td>
-</tr>
-<tr>
-<td>قنوات الدفع</td>
-<td>نقد، شبكة (مدى/فيزا/ماستركارد)، تحويل بنكي، <strong>تابي، تمارا، مدفوع (Madfu)، MISPay</strong></td>
-</tr>
-<tr>
-<td>توثيق موافقة العميل</td>
-<td>موافقة مكتوبة عبر واتساب + توقيع على كرت الإصلاح</td>
-</tr>
-<tr>
-<td>عملاء الآجل</td>
-<td>لا يوجد حاليًا؛ <strong>مستقبلًا</strong> بسداد شهري (يبقى في المرحلة 2/3)</td>
-</tr>
-<tr>
-<td>حسابات الدفع والبريد</td>
-<td>حسابات التاجر باسم فارس مباشرة؛ البريد الرسمي: Car.mcservices@gmail.com</td>
-</tr>
-<tr>
-<td>الطابعة</td>
-<td><strong>TA POS-900UE</strong> — حرارية 80مم (طباعة فعلية 72مم)، ESC/POS، منفذا USB وEthernet. الافتراضي: قالب حراري 80مم، وحجم الورق إعداد في لوحة التحكم (80مم / 58مم / A4) فتبديل الطابعة مستقبلًا لا يتطلب أي تعديل. منفذ Ethernet يتيح مشاركتها على شبكة الورشة</td>
-</tr>
-<tr>
-<td>قائمة الأسعار</td>
-<td>✅ صُدِّرت من Loyverse وحُسِّنت واعتُمدت بنيتها (Loyverse_Catalog_v2)</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>مفهوم جديد معتمد — لوحة التحكم (Control Panel):</strong> شاشة إعدادات خاصة بالمالك تضم: <strong>هوية الورشة</strong> (الاسم التجاري، الشعار/اللوغو الذي يظهر على الفواتير والتقارير، بيانات التواصل)، سقوف الخصم لكل دور، نسب الفنيين، حدود التنبيهات، بيانات الورشة النظامية (السجل التجاري والرقم الضريبي). كل تغيير فيها يُسجَّل في سجل التدقيق بالقيمة قبل وبعد.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="3">👍 معتمد</button>
-    <button class="btn-note" data-sec="3">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note3">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="3"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="4" id="sec4">
-  <div class="sec-head">
-    <span class="sec-num">4</span>
-    <h2>2-ج. قرارات مستخلصة من كتالوج Loyverse وملاحظات المالك (12 يوليو 2026)</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>الموضوع</th>
-<th>القرار</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>بنية الكتالوج</td>
-<td>مؤكدة من ملف فارس وملاحظته النصية: <strong>أجور عمل فقط</strong> (بادئة LAB-)، والأسعار <strong>مرجعية تقريبية</strong> — تختلف فعليًا حسب نوع السيارة، والمالك رفض مصفوفة تصنيف السيارات تجنبًا للتعقيد. السعر المعروض يُعدَّل لكل كرت انطلاقًا من المرجع، وتنبيه «الصافي أقل من الكتالوج» يعمل <strong>بعتبة نسبية قابلة للضبط</strong> من لوحة التحكم حتى لا يزعج بتنبيهات كاذبة</td>
-</tr>
-<tr>
-<td>الأقسام الرئيسية</td>
-<td>أربعة حسب تعريف المالك: <strong>ميكانيكا</strong> (محرك، قير، تعليق وفرامل، صيانة دورية)، <strong>كهرباء</strong> (قطع، ضفائر، حساسات)، <strong>فحص كمبيوتر</strong>، <strong>تكييف</strong> — والتفصيل الداخلي محفوظ في نمط SKU (ENG/TRN/SUS/PM/ELC/AC/DIAG/GEN)</td>
-</tr>
-<tr>
-<td>البنود المفتوحة</td>
-<td>بند «أجرة عمل أخرى» لكل قسم (رمز ‎-099) + بنود التوضيب تُسعَّر بعد الفحص — النظام يدعم بندًا بسعر يُدخل يدويًا <strong>باعتماد المدير</strong></td>
-</tr>
-<tr>
-<td>ترميز اللوحات</td>
-<td><strong>التخزين القانوني بالحروف اللاتينية + الأرقام</strong> (17 حرفًا نظاميًا فقط)، والعرض العربي عبر جدول التحويل الرسمي الثابت (أ=A، ب=B، ح=J، د=D، ر=R، س=S، ص=X، ط=T، ع=E، ق=G، ك=K، ل=L، م=Z، ن=N، هـ=H، و=U، ى=V). واجهة الإدخال: <strong>لوحة مفاتيح مخصصة من 17 زرًا</strong> تمنع الحروف غير النظامية. OCR اللوحات (مرحلة 2) يقرأ السطر اللاتيني فقط</td>
-</tr>
-<tr>
-<td>قاعدة العملاء التسويقية</td>
-<td>طلب المالك: القدرة على إرسال <strong>عروض واتساب للعملاء</strong> — يُضاف لكل عميل حقل «موافقة على الرسائل التسويقية»، وشاشة تصفية وإرسال في المرحلة 2</td>
-</tr>
-<tr>
-<td>المرحلة الانتقالية</td>
-<td>يستمر فارس على Loyverse بالكتالوج المحسّن (Loyverse_Catalog_v2) حتى إطلاق النظام، ثم تُستورد بياناته (الكتالوج + العملاء المجمّعون) إلى النظام الجديد</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="4">👍 معتمد</button>
-    <button class="btn-note" data-sec="4">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note4">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="4"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="5" id="sec5">
-  <div class="sec-head">
-    <span class="sec-num">5</span>
-    <h2>2-د. مبادئ تجربة الاستخدام ومتطلبات الجودة</h2>
-  </div>
-  <div class="sec-body">
-<p><strong>مبادئ الواجهة (UI/UX):</strong>
-1. <strong>البساطة قاعدة صارمة:</strong> أي مهمة يومية أساسية (فتح كرت، إضافة بند، تسجيل دفعة) تُنجز في <strong>ثلاث نقرات أو أقل</strong>.
-2. <strong>اختيار الخدمة بالبطاقات المصورة الهرمية:</strong> شبكة من أربع بطاقات كبيرة بأيقونات معبّرة (ميكانيكا / كهرباء / فحص كمبيوتر / تكييف) ← الضغط يعرض بطاقات الأقسام الفرعية (محرك، قير، تعليق وفرامل، صيانة دورية...) ← ثم البنود — مع <strong>بحث نصي فوري</strong> أعلى الشاشة كطريق مختصر يتجاوز التسلسل كله لمن يعرف اسم الخدمة.
-3. <strong>العميل خارج النظام كليًا:</strong> لا تطبيق ولا بوابة للعملاء — قنوات العميل هي: الشفهي، واتساب (اعتماد التسعير، التقارير، الفاتورة PDF، العروض)، والفاتورة المطبوعة. كل ما يصل العميل يخرج <strong>من</strong> النظام لا يدخل إليه.
-4. <strong>النظام يُسلَّم جاهزًا ببياناتك:</strong> الكتالوج المحسّن، هوية الورشة وشعارها، والإعدادات كلها معبأة مسبقًا للعمل من اليوم الأول — وكل شيء (الشعار، الاسم، الكتالوج، الأسعار، الإعدادات) تغيّره بنفسك من لوحة التحكم متى شئت.</p>
-<p><strong>متطلبات الجودة (غير الوظيفية):</strong>
-- <strong>الأمان:</strong> صلاحيات مفروضة في قاعدة البيانات لكل دور (RLS)، HTTPS إلزامي، أقل صلاحية ممكنة لكل دور، عدم كشف أي مفاتيح في الواجهة، نسخ احتياطي يومي تلقائي (مدمج في Supabase) مع اختبار استرجاع دوري.
-- <strong>الاستقرار:</strong> معالجة أخطاء واضحة بالعربية للمستخدم، طوابير إعادة المحاولة للعمليات الفاشلة، عدم فقدان أي إدخال.
-- <strong>قابلية الصيانة والتطوير:</strong> كود منظم بوحدات واضحة، ترحيلات قاعدة بيانات مرقمة (Migrations)، توثيق داخلي، وكل ميزة جديدة تُضاف دون كسر القائم.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="5">👍 معتمد</button>
-    <button class="btn-note" data-sec="5">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note5">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="5"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="6" id="sec6">
-  <div class="sec-head">
-    <span class="sec-num">6</span>
-    <h2>3. البنية التقنية</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>الطبقة</th>
-<th>التقنية</th>
-<th>المبرر</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>تطبيق التابلت</td>
-<td><strong>PWA (تطبيق ويب تقدمي استجابي)</strong></td>
-<td>تطبيق واحد يعمل على الجوال والتابلت (أندرويد/آيباد) والكمبيوتر من المتصفح، تطوير وتعديل أسرع بكثير، بلا متاجر تطبيقات</td>
-</tr>
-<tr>
-<td>قاعدة البيانات السحابية</td>
-<td><strong>Supabase (PostgreSQL)</strong></td>
-<td>مُدارة بالكامل، مصادقة جاهزة، صلاحيات على مستوى الصفوف (RLS)</td>
-</tr>
-<tr>
-<td>مقاومة انقطاع الإنترنت</td>
-<td><strong>Service Worker + طابور كتابة IndexedDB</strong></td>
-<td>تخزين مؤقت للواجهة + طابور محلي للعمليات والصور أثناء الانقطاع اللحظي، تُدفع للخادم فور عودة الاتصال</td>
-</tr>
-<tr>
-<td>التزامن والتنبيهات</td>
-<td><strong>Supabase Realtime + Web Push</strong></td>
-<td>عمل المالك والمشرف معًا لحظيًا بلوحة حية، وتنبيهات فورية بمفاتيح تفعيل/إيقاف لكل نوع حدث (على iOS تتطلب تثبيت PWA على الشاشة الرئيسية)</td>
-</tr>
-<tr>
-<td>تخزين الصور</td>
-<td><strong>Supabase Storage</strong></td>
-<td>الرفع عبر طابور IndexedDB مع مؤشر حالة (بانتظار الرفع / تم الرفع)</td>
-</tr>
-<tr>
-<td>طباعة الفواتير</td>
-<td><strong>قوالب HTML للطباعة عبر المتصفح: حراري 80مم (المبدئي — مطابق للطابعة POS-900UE) + 58مم + A4</strong></td>
-<td>من كمبيوتر الكاشير عبر التعريف؛ منفذ Ethernet يفتح الطباعة الشبكية المباشرة (ESC/POS منفذ 9100) من أي جهاز في المرحلة 2</td>
-</tr>
-<tr>
-<td>الفاتورة الإلكترونية</td>
-<td><strong>رمز QR بمواصفة ZATCA (TLV/Base64)</strong></td>
-<td>يُولَّد داخل النظام — التزام المرحلة الأولى من الفوترة الإلكترونية منذ MVP</td>
-</tr>
-<tr>
-<td>قراءة الباركود</td>
-<td><strong>ZXing / html5-qrcode</strong> (كاميرا المتصفح)</td>
-<td>قراءة باركود الشاصيه (Code 39/128) وتسجيله كنص لتجنب الأخطاء الإملائية</td>
-</tr>
-<tr>
-<td>بيانات المركبة</td>
-<td><strong>قوائم منسدلة</strong> (ماركة/موديل/سنة)</td>
-<td>إدخال يدوي سريع وموحّد في MVP</td>
-</tr>
-<tr>
-<td>فك ترميز الشاصيه</td>
-<td>NHTSA vPIC API (المرحلة 2، اختياري)</td>
-<td>تعبئة تلقائية كمسودة تُؤكَّد يدويًا — دقته محدودة لمواصفات الخليج</td>
-</tr>
-<tr>
-<td>OCR للوحات</td>
-<td>المرحلة 2</td>
-<td>ميزة مساعدة، الإدخال اليدوي يبقى متاحًا دائمًا</td>
-</tr>
-</tbody>
-</table></div>
-<h3>استراتيجية التعامل مع انقطاع الإنترنت</h3>
-<ul>
-<li><strong>الشبكة:</strong> كل جهاز يعمل بشريحة بياناته المستقلة (قرار المالك — لا حاجة لراوتر احتياطي، ويمكن إضافته مستقبلًا إن استجدت حاجة).</li>
-<li><strong>الخط الثاني (برمجي):</strong> Service Worker يخزّن الواجهة، وكل عملية كتابة (كرت، بند، صورة، دفعة) تمر عبر طابور IndexedDB محلي ثم تُدفع إلى Supabase — فالانقطاع اللحظي لا يفقد أي بيانات ولا يوقف العمل.</li>
-<li><strong>تنبيه تقني:</strong> التخزين المؤقت (Caching) وحده لا يكفي؛ التطبيق كثيف الكتابة، وطابور الكتابة المحلي شرط لا غنى عنه.</li>
-<li>كل سجل يحمل توقيتين: توقيت الجهاز عند الإنشاء، وتوقيت الخادم عند الوصول (حماية من التلاعب بساعة الجهاز).</li>
-<li><strong>قرار محسوم (11 يوليو 2026):</strong> أجاب المالك بأن الانقطاع نادر جدًا (مرة بالشهر أو أقل) → اعتُمدت بنية PWA نهائيًا، وطُويت الخطة البديلة (Flutter + PowerSync)، والراوتر الاحتياطي أصبح تحسينًا اختياريًا غير مستعجل.</li>
-</ul>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="6">👍 معتمد</button>
-    <button class="btn-note" data-sec="6">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note6">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="6"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="7" id="sec7">
-  <div class="sec-head">
-    <span class="sec-num">7</span>
-    <h2>4. الأدوار والصلاحيات</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>الدور</th>
-<th>الصلاحيات</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>المالك (فارس)</strong></td>
-<td>كل شيء: تعديل كتالوج الأسعار، نسب الفنيين، الاطلاع على التقارير وسجل التدقيق، اعتماد الأسعار المخصصة والخصومات فوق السقف، اعتماد التسعير التعاقدي للشركات</td>
-</tr>
-<tr>
-<td><strong>المشرف (مدير الاستلام)</strong></td>
-<td>فتح كروت الإصلاح، تسجيل العملاء والمركبات، التصوير، تحريك الكرت بين المراحل، تسجيل الدفع، اعتماد خصومات ضمن سقفه، <strong>اقتراح بنود كتالوج جديدة</strong> (تدخل الكتالوج بعد اعتماد المالك) — وصلاحيات إضافية حسب ما يفوّضه المالك</td>
-</tr>
-<tr>
-<td><strong>الفني</strong></td>
-<td><strong>غير مستخدم للنظام في مرحلة الانطلاق (قرار المالك)</strong> — المشرف يسجّل التشخيص والتنفيذ وطلبات الملحق نيابة عنه، ويبقى الفني كيانًا في قاعدة البيانات (لإسناد الأعمال واحتساب العمولات). دوره كمستخدم جاهز في التصميم للتفعيل لاحقًا، وحين يُفعَّل: يرى كروته فقط ولا يرى الأسعار</td>
-</tr>
-<tr>
-<td><strong>الكاشير / المحاسب</strong></td>
-<td>تسجيل الدفع، إصدار وطباعة الفواتير، تطبيق خصم ضمن سقف الكاشير فقط — ما تجاوزه يتطلب اعتماد المدير أو المالك (رمز PIN أو من جهازه)</td>
-</tr>
-</tbody>
-</table></div>
-<p>الصلاحيات تُفرض على مستوى قاعدة البيانات (Supabase RLS)، وليس في واجهة التطبيق فقط.</p>
-<p><strong>مبدأ الصلاحيات القابلة للتفويض:</strong> الأدوار قوالب أساسية، وفوقها <strong>مفاتيح تفويض</strong> في لوحة تحكم المالك يمنح بها المشرف صلاحيات أوسع أو يسحبها بضغطة — أمثلة المفاتيح: إضافة بند كتالوج دون اعتماد، تعديل الأسعار المرجعية، سقف خصم أعلى، اعتماد الملحقات نيابة عنه، إلغاء كرت، الاطلاع على تقارير العمولات. كل منح أو سحب صلاحية يُسجَّل في سجل التدقيق، والمفاتيح تُفرض في قواعد قاعدة البيانات لا في الواجهة.</p>
-<p><strong>سير اعتماد بنود الكتالوج الجديدة:</strong>
-- <strong>مسار مباشر:</strong> المالك يضيف بندًا من لوحة التحكم → نشط فورًا.
-- <strong>مسار الاقتراح:</strong> المشرف يضيف بندًا → حالته «بانتظار اعتماد المالك» (إشعار فوري) → يعتمده المالك فيصبح نشطًا أو يرفضه.
-- <strong>مسار من الواقع:</strong> عميل حاضر وخدمة غير موجودة بالكتالوج → المشرف يدخلها بندًا مخصصًا في الكرت (يتطلب اعتماد المالك أصلًا) → وعند الاعتماد يُسأل المالك: «إضافة هذا البند للكتالوج بشكل دائم؟» — فيتغذى الكتالوج من العمل اليومي دون تعطيل أي عميل.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="7">👍 معتمد</button>
-    <button class="btn-note" data-sec="7">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note7">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="7"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="8" id="sec8">
-  <div class="sec-head">
-    <span class="sec-num">8</span>
-    <h2>5. نموذج البيانات (الجداول الأساسية)</h2>
-  </div>
-  <div class="sec-body">
-<p><code>customers        العملاء: الاسم، الجوال، النوع (فرد/شركة)، موافقة الرسائل التسويقية، ملاحظات
-vehicles         المركبات: الشاصيه VIN (فريد)، اللوحة (تخزين قانوني لاتيني + عرض عربي بجدول
-                 التحويل الرسمي)، الماركة، الموديل، السنة، صاحب المركبة
-work_orders      كروت الإصلاح: رقم تسلسلي، المركبة، العميل، الحالة، قراءة العداد، التواريخ،
-                 الخصم (النوع/القيمة/مَن طبّقه/مَن اعتمده)
-contracts        عقود الشركات (B2B): الشركة، نوع التسعير (كتالوج خاص أو نسبة خصم)، شروط
-                 السداد (شهري مجمّع)، تاريخ البداية والنهاية، حالة العقد
-invoices         الفواتير: رقم الفاتورة التسلسلي، الكرت، المبالغ والضريبة، بيانات رمز QR
-                 (مواصفة ZATCA)، قناة الإرسال (طباعة/واتساب/بريد)، التوقيت
-order_items      بنود الأعمال: الخدمة من الكتالوج، أجرة العمل بثلاث قيم (سعر الكتالوج المرجعي /
-                 السعر المعروض للعميل / الصافي بعد الخصم)، قيمة قطع الغيار (منفصلة — لا عمولة عليها)،
-                 الفني المنفذ، نسبته، حالة الاعتماد، رقم الملحق (فارغ = البنود الأصلية)
-order_revisions  الملحقات (Change Orders): الكرت، رقم الملحق التسلسلي، سبب الطلب، الفني الطالب،
-                 الحالة (بانتظار المالك / بانتظار العميل / معتمد / مرفوض)، توقيتات الطلب والاعتماد
-services_catalog كتالوج الخدمات: اسم الخدمة، أجرة العمل المرجعية، التصنيف (ميكانيكا/كهرباء/تكييف/...)،
-                 حالة البند (نشط / بانتظار اعتماد المالك / موقوف)، مقترح البند — القطع تُسعَّر داخل الكرت
-settings         الإعدادات (لوحة تحكم المالك): سقوف الخصم لكل دور، النسبة الافتراضية (40%)،
-                 حدود التنبيهات، حجم ورق الطباعة (حراري 80مم مبدئيًا / 58مم / A4 — لتبديل الطابعة بلا أي تعديل برمجي)،
-                 بيانات الورشة الضريبية — كل تغيير مسجل في التدقيق
-technicians      الفنيون: الاسم، نسبة العمولة الافتراضية، التخصص
-photos           الصور: الكرت المرتبط، النوع (قبل/بعد)، المسار، حالة الرفع، التوقيتان
-payments         المدفوعات: الكرت، المبلغ، الطريقة (نقد/شبكة/تحويل/آجل/تابي/تمارا/مدفوع/MISPay)،
-                 المزوّد، مرجع العملية، حالة العملية (بانتظار/مدفوعة/فاشلة/مستردة)، التاريخ
-audit_log        سجل التدقيق: المستخدم، الجدول، السجل، القيمة قبل/بعد، توقيت الجهاز، توقيت الخادم
-users            المستخدمون: الاسم، الدور، الحالة، مفاتيح التفويض الممنوحة من المالك (JSON)</code></p>
-<h3>قواعد ذهبية</h3>
-<ul>
-<li>رقم الشاصيه هو المعرّف الفريد للمركبة (اللوحات تتغيّر، الشاصيه لا يتغيّر).</li>
-<li>بنود الأعمال تُختار من الكتالوج فقط؛ أي بند بسعر مخصص يبقى «بانتظار اعتماد المالك».</li>
-<li>لا حذف فعلي لأي سجل (Soft Delete فقط) — كل شيء يبقى في سجل التدقيق.</li>
-</ul>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="8">👍 معتمد</button>
-    <button class="btn-note" data-sec="8">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note8">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="8"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="9" id="sec9">
-  <div class="sec-head">
-    <span class="sec-num">9</span>
-    <h2>6. دورة العمل (State Machine)</h2>
-  </div>
-  <div class="sec-body">
-<p><code>1. استلام المركبة        فتح كرت + مسح باركود الشاصيه + ربط/إنشاء ملف العميل
-        ↓
-2. التصوير قبل الفحص     صور إلزامية للمركبة (4 زوايا كحد أدنى + العداد)
-        ↓
-3. التشخيص والفحص الفني  الفني يسجّل ملاحظاته
-        ↓
-4. تحديد الأعطال والبنود  اختيار البنود من الكتالوج + إسناد كل بند لفني
-        ↓
-5. التسعير               السعر يُسحب آليًا من الكتالوج
-        ↓
-6. اعتماد العميل          موافقة موثقة (توقيع على الشاشة أو تأكيد هاتفي مسجّل بالوقت)
-        ↓
-7. التنفيذ والإصلاح       الفني يحدّث حالة كل بند
-        │
-        ├──← مسار فرعي: طلب ملحق (Change Order) ──────────────────────┐
-        │    عند اكتشاف أعطال إضافية بعد الفك:                          │
-        │    أ. الفني يوقف العمل ويفتح «طلب ملحق» ويصف العطل المكتشف     │
-        │    ب. مدير الاستلام/المالك يضيف البنود الجديدة من الكتالوج      │
-        │    ج. اعتماد العميل على الملحق (موثق بالوقت)                   │
-        │    د. عودة الكرت لحالة «التنفيذ» — والبنود المرفوضة لا تُنفَّذ    │
-        │◄──────────────────────────────────────────────────────────────┘
-        ↓
-8. الفحص النهائي والتصوير صور «بعد الإصلاح» إلزامية قبل الانتقال
-        ↓
-9. الدفع                 تسجيل المبلغ والطريقة
-        ↓
-10. التسليم النهائي       إغلاق الكرت + احتساب نسب الفنيين آليًا</code></p>
-<p><strong>قيود إلزامية:</strong>
-- لا انتقال من مرحلة لأخرى إلا بالتسلسل (مع إمكانية إلغاء الكرت في أي مرحلة مع ذكر السبب).
-- لا «بدء تنفيذ» دون اعتماد العميل.
-- <strong>بنود الملحق لا تُنفَّذ ولا تدخل في عمولة الفني إلا بعد اعتماد العميل والمالك</strong> — أي عمل خارج البنود المعتمدة لا يُحتسب.
-- لا «إغلاق» دون صور ما بعد الإصلاح ودون تسجيل الدفع (أو تسجيله كآجل معتمد).
-- كل انتقال يُسجّل: من قام به ومتى.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="9">👍 معتمد</button>
-    <button class="btn-note" data-sec="9">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note9">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="9"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="10" id="sec10">
-  <div class="sec-head">
-    <span class="sec-num">10</span>
-    <h2>6-ب. متابعة الكروت المفتوحة (مؤشرات التقادم)</h2>
-  </div>
-  <div class="sec-body">
-<p>حالات التقادم <strong>تُحسب آليًا</strong> من تاريخ الاستلام ولا يمكن تعديلها يدويًا — حتى لا يستطيع أحد «تصفير العداد»:</p>
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>المدة منذ الاستلام</th>
-<th>الحالة</th>
-<th>السلوك</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0 – 3 أيام</td>
-<td>ضمن الوقت (أخضر)</td>
-<td>متابعة عادية</td>
-</tr>
-<tr>
-<td>أكثر من 3 أيام</td>
-<td><strong>متأخر</strong> (برتقالي)</td>
-<td>تظهر في أعلى لوحة المتابعة + تنبيه للمدير</td>
-</tr>
-<tr>
-<td>أكثر من 7 أيام</td>
-<td><strong>إلزامي الإنهاء</strong> (أحمر)</td>
-<td>تنبيه مباشر للمالك + إلزام بتسجيل سبب التأخير في الكرت، ولا يُفتح كرت جديد للفني المسؤول قبل معالجة الموقف (قابلة للتفعيل حسب رغبة المالك)</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>قاعدة معتمدة من المالك:</strong> يتوقف عدّاد التأخير عندما يكون الكرت في حالة «بانتظار اعتماد العميل» أو «بانتظار قطعة غيار» — يُحاسَب الفريق على الوقت الذي بيده فقط، ويُوثَّق وقت الانتظار الخارجي بحقل مستقل في الكرت (سبب الإيقاف + مدته).</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="10">👍 معتمد</button>
-    <button class="btn-note" data-sec="10">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note10">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="10"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="11" id="sec11">
-  <div class="sec-head">
-    <span class="sec-num">11</span>
-    <h2>7. ضوابط منع التلاعب (جوهر المشروع)</h2>
-  </div>
-  <div class="sec-body">
-<ol>
-<li><strong>كتالوج مرجعي مضبوط:</strong> أجرة الكتالوج هي المرجع لا السقف — يجوز عرض سعر أعلى للعميل ثم منح «خصم خاص» (استراتيجية المالك)، لكن النظام يسجل دائمًا القيم الثلاث (كتالوج / معروض / صافٍ) <strong>وينبه المالك آليًا لأي كرت صافيه أقل من سعر الكتالوج</strong> — فهناك تكمن الخسارة الحقيقية، لا في نسبة الخصم الظاهرة.</li>
-<li><strong>اعتماد ثنائي:</strong> السعر المخصص يتطلب موافقة المالك من جهازه (إشعار فوري).</li>
-<li><strong>سجل تدقيق شامل:</strong> كل تعديل موثّق بالقيمة قبل وبعد، ولا يمكن حذفه حتى من المالك.</li>
-<li><strong>توقيتان لكل سجل:</strong> توقيت الجهاز + توقيت الخادم عند المزامنة.</li>
-<li><strong>نسب آلية:</strong> عمولة الفني تُحسب من البنود المعتمدة والمدفوعة فقط، بتقرير شهري تلقائي.</li>
-<li><strong>الملحقات موثقة:</strong> الأعطال المكتشفة أثناء العمل تمر بدورة اعتماد رسمية (طلب ملحق) — فتُغلق الثغرة الأخطر: «أعمال إضافية» تُضاف شفهيًا وتُحاسَب خارج النظام.</li>
-<li><strong>الصور دليل:</strong> صور قبل/بعد إلزامية بطابع زمني، تحمي الورشة من ادعاءات العملاء وتحمي المالك من تجاوزات الفنيين معًا.</li>
-<li><strong>الخصومات مضبوطة بسقوف مرنة:</strong> السقوف تُعرَّف في لوحة تحكم المالك (افتراضيًا: كاشير 15%، مدير 40%) وتُعدَّل منها فقط — وأي تغيير للسقوف نفسها يُسجَّل في التدقيق. كل خصم موثق بمن طبّقه ومن اعتمده وقيمته، والعمولة تُحسب من الصافي فتنعكس الخصومات آليًا.</li>
-<li><strong>مؤشرات التقادم غير قابلة للتلاعب:</strong> تُحسب من توقيت الخادم لتاريخ الاستلام، ولا يملك أحد إعادة ضبطها.</li>
-</ol>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="11">👍 معتمد</button>
-    <button class="btn-note" data-sec="11">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note11">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="11"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="12" id="sec12">
-  <div class="sec-head">
-    <span class="sec-num">12</span>
-    <h2>7-ب. قنوات الدفع</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>القناة</th>
-<th>آلية العمل في النظام</th>
-<th>ملاحظات</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>نقد / شبكة (مدى)</td>
-<td>تسجيل يدوي في النظام، والعملية تتم على جهاز نقاط البيع المستقل</td>
-<td>تعمل حتى دون إنترنت في التطبيق</td>
-</tr>
-<tr>
-<td><strong>تابي / تمارا / مدفوع (Madfu) / MISPay (تقسيط)</strong></td>
-<td>في MVP تُنفَّذ من لوحة تاجر كل خدمة وتُسجَّل في النظام يدويًا بمرجع العملية؛ وفي المرحلة 2: روابط دفع من النظام + Webhooks</td>
-<td>تتطلب اتصالًا لحظة الدفع + حسابات تاجر مباشرة (مؤكدة باسم فارس)</td>
-</tr>
-<tr>
-<td>تحويل بنكي</td>
-<td>تسجيل يدوي مع مرجع التحويل</td>
-<td>—</td>
-</tr>
-<tr>
-<td>آجل (شركات B2B)</td>
-<td>ربط بالكرت وترحيل لفاتورة شهرية مجمّعة</td>
-<td>تابي/تمارا لا تنطبقان على الشركات</td>
-</tr>
-</tbody>
-</table></div>
-<p><strong>قواعد:</strong>
-- الكرت لا يُغلق إلا بعملية دفع «مدفوعة» مؤكدة أو آجل معتمد — رابط الدفع «بانتظار» لا يكفي للإغلاق.
-- المطابقة (Reconciliation): مرجع كل عملية تابي/تمارا يُخزَّن في النظام لمطابقته مع لوحة التاجر ومع التسويات البنكية.
-- في MVP تُسجَّل عمليات تابي/تمارا يدويًا (تُنفَّذ من لوحة التاجر الحالية)، والتكامل البرمجي الكامل بالروابط والـ Webhooks في المرحلة 2.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="12">👍 معتمد</button>
-    <button class="btn-note" data-sec="12">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note12">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="12"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="13" id="sec13">
-  <div class="sec-head">
-    <span class="sec-num">13</span>
-    <h2>8. مراحل التنفيذ</h2>
-  </div>
-  <div class="sec-body">
-<h3>المرحلة 1 — الأساس (MVP)</h3>
-<ul>
-<li>إعداد Supabase (الجداول + RLS + المصادقة) — مستخدمان فقط في الانطلاق: المالك والمشرف.</li>
-<li>هيكل تطبيق PWA: واجهة <strong>سطح مكتب</strong> لجهاز الكاشير + واجهة <strong>جوال</strong> للمشرف، Service Worker وطابور IndexedDB.</li>
-<li>لوحة تحكم المالك: هوية الورشة (الاسم التجاري + رفع الشعار الذي يظهر على الفاتورة والتقارير)، إدارة الفنيين (إضافة/تعديل/إيقاف + نسبة كل فني، الافتراضي 40%)، إدارة بنود الكتالوج (إضافة/تعديل/إيقاف + اعتماد مقترحات المشرف)، <strong>مفاتيح تفويض صلاحيات المشرف</strong>، سقوف الخصم، حدود التنبيهات، بيانات الورشة النظامية (السجل التجاري والرقم الضريبي).</li>
-<li><strong>سرعة الاستلام (متطلب أساسي):</strong> مسح باركود الشاصيه بكاميرا الجوال + لوحة مفاتيح اللوحات المخصصة (17 زرًا — المسار الأساسي المضمون) + <strong>بحث فوري للمركبات العائدة</strong> (بأول حروف اللوحة أو جوال العميل — يعبئ كل شيء تلقائيًا) + قوائم منسدلة للماركة/الموديل/السنة.</li>
-<li><strong>OCR اللوحات — تجربة محددة المدة خلف مفتاح ميزة:</strong> بناء بيومين كحد أقصى (Tesseract.js بقائمة سماح للحروف الـ17 والأرقام + Regex صارم + شاشة تأكيد إلزامية قبل الحفظ)، ثم اختبار ميداني في ساحة الورشة بمعيار قبول <strong>دقة ≥90%</strong> — يجتازه فيُفعَّل كمسرّع فوق لوحة المفاتيح، أو يخفق فيُرحَّل للمرحلة 2 دون تأخير الإطلاق.</li>
-<li>كرت الإصلاح بدورة الحالات الكاملة <strong>بما فيها مسار طلب الملحق (Change Order)</strong> وحالات إيقاف العدّاد.</li>
-<li>كتالوج أجور العمل المرجعي + تسعير القطع داخل الكرت.</li>
-<li>التصوير قبل/بعد بجوال المشرف مع طابور الرفع.</li>
-<li>تسجيل الدفع بكل القنوات (نقد/شبكة/تابي/تمارا/مدفوع/MISPay تُسجَّل يدويًا) وإغلاق الكرت.</li>
-<li>سجل التدقيق واحتساب العمولات (من صافي أجور العمل، للبنود المعتمدة أصلية وملحقة).</li>
-<li>لوحة متابعة الكروت المفتوحة بمؤشرات التقادم (3 / 7 أيام) وتنبيهات المالك، شاملة تنبيه «الصافي أقل من الكتالوج» بعتبة قابلة للضبط.</li>
-<li>تحديثات حية (Realtime) للوحة المتابعة + تنبيهات Web Push بمفاتيح تفعيل/إيقاف لكل نوع حدث من لوحة التحكم.</li>
-<li>شاشة اختيار الخدمة بالبطاقات المصورة الهرمية (4 أقسام ← أقسام فرعية ← بنود) مع بحث نصي فوري.</li>
-<li>تعبئة النظام ببيانات البذرة الكاملة لورشة فارس (الكتالوج المحسّن + الهوية والشعار + الإعدادات).</li>
-<li>إصدار فاتورة مبسطة برمز QR بمواصفة ZATCA (المرحلة الأولى) وطباعتها من كمبيوتر الكاشير على الطابعة الحرارية POS-900UE (80مم) — وأحجام أخرى من إعداد لوحة التحكم.</li>
-</ul>
-<h3>المرحلة 2 — التحسينات</h3>
-<ul>
-<li>فك ترميز الشاصيه (NHTSA) لتعبئة بيانات المركبة كمسودة.</li>
-<li>OCR للوحات السعودية كمسار مساعد.</li>
-<li>تقرير فني PDF للعميل يُشارك عبر واتساب (قبل/بعد الإصلاح).</li>
-<li>لوحة إحصاءات للمالك: الإيرادات، أداء الفنيين، أكثر الأعطال تكرارًا.</li>
-<li>تكامل برمجي مع تابي وتمارا: إنشاء روابط الدفع من داخل النظام + تحديث الحالة آليًا عبر Webhooks.</li>
-<li>إرسال الفاتورة PDF آليًا عبر واتساب والبريد الإلكتروني.</li>
-<li>أساسيات عقود الشركات (B2B): نوع عميل «شركة بعقد»، تسعير أو خصم تعاقدي بصلاحية المالك، فوترة شهرية مجمّعة آجلة.</li>
-<li>شاشة تسويق العملاء: تصفية قاعدة العملاء (حسب آخر زيارة، نوع الخدمة، الموافقة التسويقية) وإرسال عروض واتساب — بدءًا بروابط click-to-chat وقوائم إرسال، والبث الآلي عبر WhatsApp Business API في المرحلة 3.</li>
-<li>OCR للوحات السعودية: <strong>يُستكمل هنا فقط إن أخفق في اختبار القبول الميداني داخل MVP</strong> — بمعالجة صورة مسبقة أعمق (قص، تباين، تصحيح ميل) أو مكتبة متخصصة، ويبقى مسرّعًا اختياريًا فوق لوحة المفاتيح لا بديلًا عنها.</li>
-<li>توقيع العميل على الشاشة عند الاعتماد والتسليم.</li>
-</ul>
-<h3>المرحلة 3 — التوسع</h3>
-<ul>
-<li>الربط البرمجي الكامل مع منصة «فاتورة» (مرحلة الربط والتكامل من ZATCA) عند انطباق شروط الإلزام على الورشة.</li>
-<li>بوابة عقود الأساطيل الكاملة (B2B): تقارير دورية للشركات، جدولة صيانة وقائية، تنبيهات آلية.</li>
-<li>تنبيهات واتساب/رسائل للعملاء (جاهزية المركبة، مواعيد الصيانة الدورية).</li>
-</ul>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="13">👍 معتمد</button>
-    <button class="btn-note" data-sec="13">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note13">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="13"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="14" id="sec14">
-  <div class="sec-head">
-    <span class="sec-num">14</span>
-    <h2>9. ما تبقى قبل بدء البناء</h2>
-  </div>
-  <div class="sec-body">
-<p>(أُجيبت أسئلة التأسيس كاملة في استبيان 11 يوليو 2026 — انظر القسم 2-ب)</p>
-<p><strong>مدخلات تصميم (نحتاجها قبل البناء لأنها تحدد شكل النظام):</strong>
-1. ~~عينة من قائمة الأسعار~~ — <strong>✅ مستلمة ومحسّنة</strong> (Loyverse_Catalog_v2)، وبنيتها حسمت تصميم الكتالوج.
-2. ~~موديل الطابعة~~ — <strong>✅ مستلم: TA POS-900UE</strong> (حرارية 80مم، USB + Ethernet، ESC/POS) — القالب المبدئي 80مم مطابق لها، وحجم الورق يبقى إعدادًا في لوحة التحكم (80/58مم/A4) لأي طابعة مستقبلية.
-3. ~~تأكيد تفسير عملاء الآجل~~ — <strong>✅ محسوم:</strong> تخطيط مستقبلي فقط، وسيكون بسداد شهري.</p>
-<p><strong>⬅ لا يوجد أي معطّل للبدء.</strong></p>
-<p><strong>بيانات تشغيل (يدخلها فارس بنفسه من لوحة التحكم بعد البناء — لا نطلبها الآن):</strong>
-- الفنيون: إضافة/تعديل/إيقاف، ونسبة كل فني (الافتراضي 40%).
-- بنود الكتالوج وأسعارها المرجعية.
-- بيانات الورشة النظامية (السجل التجاري، الرقم الضريبي) — قبل إصدار أول فاتورة.
-- سقوف الخصم وحدود التنبيهات.
-- بيانات حسابات التاجر (مدفوع، MISPay...) — عند التكامل البرمجي في المرحلة 2.</p>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="14">👍 معتمد</button>
-    <button class="btn-note" data-sec="14">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note14">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="14"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="15" id="sec15">
-  <div class="sec-head">
-    <span class="sec-num">15</span>
-    <h2>10. المخاطر ونقاط الانتباه</h2>
-  </div>
-  <div class="sec-body">
-<div class="twrap"><table>
-<thead>
-<tr>
-<th>الخطر</th>
-<th>المعالجة</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>انقطاع الإنترنت (نادر بإفادة المالك)</td>
-<td>طابور كتابة IndexedDB يغطي الانقطاع اللحظي؛ كل جهاز بشريحته المستقلة (قرار المالك — لا راوتر)</td>
-</tr>
-<tr>
-<td>توافق كاميرا الجوال مع مكتبات الباركود في المتصفح</td>
-<td>اختبار مبكر على جوالَي الورشة الفعليين في الأسبوع الأول</td>
-</tr>
-<tr>
-<td>اختلاف الطابعات وأحجام الورق</td>
-<td>قوالب طباعة متعددة (حراري 80/58مم وA4) مع حجم الورق كإعداد في لوحة التحكم + الاختبار المبكر على طابعة فارس الفعلية (POS-900UE)</td>
-</tr>
-<tr>
-<td>تعارض التعديلات (جهازان يعدّلان نفس الكرت)</td>
-<td>مستخدمان فقط في الانطلاق يقلل الاحتمال جدًا؛ سياسة «آخر كتابة تفوز» مع توثيق كل شيء في سجل التدقيق</td>
-</tr>
-<tr>
-<td>ضياع الصور قبل الرفع</td>
-<td>طابور رفع دائم على الجهاز + مؤشر حالة واضح + منع إغلاق الكرت وصوره غير مرفوعة إن توفر اتصال</td>
-</tr>
-<tr>
-<td>الالتفاف على النظام بأعمال إضافية شفهية</td>
-<td>مسار طلب الملحق الرسمي + قاعدة «ما ليس في النظام لا يُحاسَب عليه ولا تُصرف عنه عمولة»</td>
-</tr>
-<tr>
-<td>اعتماد الإدخال كله على المشرف (نقطة وحيدة)</td>
-<td>واجهة إدخال سريعة جدًا للمشرف؛ المالك يدخل من أي جهاز للرقابة؛ وتفعيل حسابات الفنيين لاحقًا يوزع الحمل</td>
-</tr>
-<tr>
-<td>نزاع الفنيين على العمولات رغم غيابهم عن النظام</td>
-<td>تقرير عمولة شهري مطبوع لكل فني (شفافية من طرف واحد): بنوده، صافي أجوره، نسبته — موثق من سجل لا يمكن التلاعب به</td>
-</tr>
-<tr>
-<td>قراءة OCR خاطئة تُنشئ سجلات مركبات ملوثة</td>
-<td>قائمة سماح صارمة (17 حرفًا + أرقام) + شاشة تأكيد إلزامية قبل الحفظ + مفتاح ميزة يُطفأ فورًا عند تكرار الأخطاء + لوحة المفاتيح تبقى المسار الأساسي دائمًا</td>
-</tr>
-<tr>
-<td>دقة فك ترميز الشاصيه لسيارات الخليج</td>
-<td>البيانات المستوردة مسودة تُؤكَّد يدويًا دائمًا (مرحلة 2)</td>
-</tr>
-<tr>
-<td>دقة فك ترميز الشاصيه لسيارات الخليج</td>
-<td>البيانات المستوردة مسودة تُؤكَّد يدويًا دائمًا</td>
-</tr>
-</tbody>
-</table></div>
-<hr />
-</div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="15">👍 معتمد</button>
-    <button class="btn-note" data-sec="15">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note15">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="15"></textarea>
-  </div>
-</section>
-
-<section class="card" data-sec="16" id="sec16">
-  <div class="sec-head">
-    <span class="sec-num">16</span>
-    <h2>11. الخطوات التالية المقترحة</h2>
-  </div>
-  <div class="sec-body">
-<ol>
-<li>مراجعة هذا الملف مع فارس واعتماد النطاق.</li>
-<li>جمع متطلبات القسم 9.</li>
-<li>تصميم مخطط قاعدة البيانات التفصيلي (SQL) وقواعد RLS.</li>
-<li>تصميم شاشات التطبيق (Wireframes) — نبدأ بشاشة الاستلام وكرت الإصلاح.</li>
-<li>إنشاء مشروع Supabase + مستودع GitHub والبدء بالمرحلة 1.</li>
-</ol></div>
-  <div class="sec-actions">
-    <button class="btn-approve" data-sec="16">👍 معتمد</button>
-    <button class="btn-note" data-sec="16">✍️ ملاحظة</button>
-  </div>
-  <div class="note-box" id="note16">
-    <textarea placeholder="اكتب ملاحظتك على هذا القسم هنا..." data-sec="16"></textarea>
-  </div>
-</section>
-
-<section class="card" id="generalCard" style="border-style:dashed;border-color:rgba(245,166,35,.45)">
-  <div class="sec-head">
-    <span class="sec-num" style="color:var(--amber)">🗒</span>
-    <h2 style="color:var(--amber)">ملاحظات أخرى خارج الأقسام</h2>
-  </div>
-  <div class="sec-body"><p style="color:var(--muted)">أي فكرة أو طلب أو شيء في نفسك لم تجد له مكانًا في الأقسام أعلاه — اكتبه هنا بحرية.</p></div>
-  <div class="sec-actions">
-    <button class="btn-note" id="gBtn">✍️ اكتب ما في نفسك</button>
-  </div>
-  <div class="note-box" id="gBox">
-    <textarea id="gTa" placeholder="اكتب هنا أي ملاحظات عامة، أفكار، طلبات إضافية..."></textarea>
-  </div>
-</section>
+<div id="survey"></div>
 
 <div class="send-panel">
-  <h2>انتهيت من المراجعة؟</h2>
-  <p>سيُرسل ملخص باعتماداتك وملاحظاتك، وكل ملاحظة موسومة باسم قسمها ورقمه.</p>
+  <h2>أرسل إجاباتك</h2>
+  <p>زر واحد يرسل كل شيء واتساب مباشرة.</p>
   <div class="btn-row">
     <button class="btn btn-wa" id="btnWa">📱 إرسال عبر واتساب</button>
-    <button class="btn btn-copy" id="btnCopy">📋 نسخ الملخص</button>
+    <button class="btn btn-copy" id="btnCopy">📋 نسخ</button>
     <button class="btn btn-view" id="btnView">👁 معاينة</button>
   </div>
+  <div class="missing-note" id="missingNote"></div>
   <div class="preview" id="preview"><pre id="previewText"></pre></div>
 </div>
 
-<footer>يُحفظ تقدمك تلقائيًا في هذا الجهاز · إعداد: يوسف</footer>
+<footer>تُحفظ إجاباتك تلقائيًا في جهازك · إعداد: يوسف</footer>
 </div>
 <div class="toast" id="toast">تم النسخ ✓</div>
 
@@ -909,106 +145,227 @@ users            المستخدمون: الاسم، الدور، الحالة، 
 "use strict";
 const PIN_B64 = "Mzk0Nw==";
 const WHATSAPP_TO = "966540697744";
-const TITLES = ["1. الملخص التنفيذي", "2. المشكلة والأهداف", "2-ب. قرارات معتمدة من المالك (استبيان وتوضيحات 11 يوليو 2026)", "2-ج. قرارات مستخلصة من كتالوج Loyverse وملاحظات المالك (12 يوليو 2026)", "2-د. مبادئ تجربة الاستخدام ومتطلبات الجودة", "3. البنية التقنية", "4. الأدوار والصلاحيات", "5. نموذج البيانات (الجداول الأساسية)", "6. دورة العمل (State Machine)", "6-ب. متابعة الكروت المفتوحة (مؤشرات التقادم)", "7. ضوابط منع التلاعب (جوهر المشروع)", "7-ب. قنوات الدفع", "8. مراحل التنفيذ", "9. ما تبقى قبل بدء البناء", "10. المخاطر ونقاط الانتباه", "11. الخطوات التالية المقترحة"];
-const TOTAL = TITLES.length;
-const LS_KEY = "muraja_faris_v18";
+const LS_KEY = "istifsar_faris_v20";
 
-/* البوابة */
+const QUESTIONS = [
+ {id:"q1", type:"single",
+  title:"نسبة الفني: طلبت «التعديل عليها يدويًا» — أين بالضبط؟",
+  hint:"النسبة العامة لكل فني موجودة أصلًا في لوحة التحكم. السؤال: هل تحتاج فوقها استثناءً على سيارة بعينها؟ مثال: فني نسبته 40% لكن على هذه السيارة تحديدًا اتفقتما على 50%.",
+  options:["تكفيني النسبة العامة لكل فني من لوحة التحكم",
+           "أريد أيضًا تغيير النسبة على سيارة/كرت معيّن كاستثناء (يُسجَّل في التدقيق)"],
+  other:true},
+
+ {id:"q2", type:"single",
+  title:"«إضافة السيارة بشكل آجل» — ماذا قصدت؟",
+  hint:"فهمناها باحتمالين، حدّد قصدك:",
+  options:["فتح كرت بتاريخ استلام سابق — لسيارة دخلت وفاتنا تسجيلها في حينها",
+           "إدخال سريع ببيانات ناقصة (لوحة وجوال مثلًا) تُستكمل لاحقًا",
+           {t:"الاثنان معًا", rec:true}],
+  other:true},
+
+ {id:"q3", type:"single",
+  title:"ذكرت الحساب البنكي باسم المؤسسة — هل تريد عرض الآيبان على الفاتورة؟",
+  hint:"مفيد لمن يدفع تحويلًا: يجد رقم الحساب أمامه على الفاتورة مباشرة.",
+  options:["نعم، اعرضوا الآيبان واسم المؤسسة على الفاتورة (اكتب الآيبان بالأسفل)",
+           "لا، يكفي اسم المؤسسة فقط"],
+  inputs:[{key:"iban", label:"رقم الآيبان (SA...)", type:"text"}]},
+
+ {id:"q4", type:"single",
+  title:"دورة العمل (من الاستلام إلى التسليم) — واضحة لك تمامًا؟",
+  hint:"سألت عن «الدورة وش محتوياتها» — إن كان فيها أي غموض نجهز لك شرحًا مبسطًا برسم قبل البدء.",
+  options:["واضحة تمامًا، ننطلق",
+           "أريد شرحًا مبسطًا لها برسم توضيحي قبل البدء"]},
+
+ {id:"q5", type:"single",
+  title:"مؤشر رضا العملاء: اقترحنا رسالة تقييم واتساب بسيطة (1-5) بعد التسليم — رأيك؟",
+  hint:"هي آلية اقترحناها نحن لقياس الرضا الذي طلبته في اللوحة، ولم نعتمدها بعد بدون رأيك.",
+  options:["موافق — رسالة تقييم بسيطة بعد كل تسليم",
+           "لا أريد إزعاج العملاء برسائل — نكتفي بمؤشر الإرجاعات"],
+  other:true},
+
+ {id:"q6", type:"multi",
+  title:"المواد المطلوبة منك — ما الذي سترسله واتساب مع هذه الإجابات؟",
+  hint:"اختر الجاهز الآن، والباقي أرسله متى تيسر — لا شيء منها يوقف البناء.",
+  options:["الشعار (ملف الصورة بأعلى جودة)",
+           "موقع الورشة (رابط قوقل ماب)",
+           "جدول البنود الـ21 معبأ بالأسعار",
+           "صورة السجل التجاري"],
+  other:false},
+
+ {id:"q7", type:"none",
+  title:"أي شيء أخير في نفسك قبل أن نبدأ البناء؟",
+  hint:"كلمة أخيرة، شرط، أمنية — هذا آخر باب مفتوح قبل التنفيذ.",
+  inputs:[{key:"final", label:"اكتب هنا (اختياري)", type:"textarea"}]}
+];
+
+/* ============ بناء الواجهة ============ */
+const surveyEl = document.getElementById("survey");
+QUESTIONS.forEach((q, i) => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.qid = q.id;
+  let html = '<div class="q-head"><span class="q-num">' + (i+1) + '</span><span class="q-title">' + q.title + '</span></div>';
+  if (q.hint) html += '<p class="q-hint">' + q.hint + '</p>';
+  if (q.type === "single" || q.type === "multi") {
+    const it = q.type === "multi" ? "checkbox" : "radio";
+    html += '<div class="options">';
+    q.options.forEach((opt, oi) => {
+      const isObj = typeof opt === "object";
+      const text = isObj ? opt.t : opt;
+      const rec = isObj && opt.rec ? '<span class="rec">الأنسب غالبًا</span>' : "";
+      const oid = q.id + "_o" + oi;
+      html += '<div class="opt ' + (q.type==="multi"?"multi":"") + '">' +
+        '<input type="' + it + '" name="' + q.id + '" id="' + oid + '" value="' + text.replace(/"/g,"&quot;") + '">' +
+        '<label for="' + oid + '"><span class="mark"></span><span>' + text + '</span>' + rec + '</label></div>';
+    });
+    if (q.other) {
+      const oid = q.id + "_other";
+      html += '<div class="opt ' + (q.type==="multi"?"multi":"") + '">' +
+        '<input type="' + it + '" name="' + q.id + '" id="' + oid + '" value="__other__">' +
+        '<label for="' + oid + '"><span class="mark"></span><span>أخرى / إجابة مختلفة</span></label></div>';
+      html += '<div class="other-box field" id="' + q.id + '_otherbox">' +
+        '<input type="text" id="' + q.id + '_othertext" placeholder="اكتب إجابتك..."></div>';
+    }
+    html += '</div>';
+  }
+  if (q.inputs) {
+    html += '<div class="inputs">';
+    q.inputs.forEach(inp => {
+      html += '<div class="field"><label for="' + q.id + '_' + inp.key + '">' + inp.label + '</label>';
+      html += (inp.type === "textarea")
+        ? '<textarea id="' + q.id + '_' + inp.key + '"></textarea>'
+        : '<input type="text" id="' + q.id + '_' + inp.key + '">';
+      html += '</div>';
+    });
+    html += '</div>';
+  }
+  card.innerHTML = html;
+  surveyEl.appendChild(card);
+});
+
+/* ============ الحالة والحفظ ============ */
+const total = QUESTIONS.length;
+document.getElementById("ptotal").textContent = total;
+
+function collectState() {
+  const s = {checked:{}, texts:{}};
+  document.querySelectorAll('#survey input[type=radio], #survey input[type=checkbox]').forEach(el=>{
+    if (el.checked) { (s.checked[el.name] = s.checked[el.name] || []).push(el.id); }
+  });
+  document.querySelectorAll('#survey input[type=text], #survey textarea').forEach(el=>{
+    if (el.value.trim() !== "") s.texts[el.id] = el.value;
+  });
+  return s;
+}
+function saveState(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(collectState())); }catch(e){} }
+function loadState(){
+  try{
+    const s = JSON.parse(localStorage.getItem(LS_KEY) || "null");
+    if (!s) return;
+    Object.values(s.checked || {}).flat().forEach(id=>{
+      const el = document.getElementById(id); if (el) el.checked = true;
+    });
+    Object.entries(s.texts || {}).forEach(([id,v])=>{
+      const el = document.getElementById(id); if (el) el.value = v;
+    });
+  }catch(e){}
+}
+loadState();
+
+function isAnswered(q) {
+  if (q.type === "single" || q.type === "multi") {
+    if (document.querySelectorAll('input[name="' + q.id + '"]:checked').length > 0) return true;
+  }
+  if (q.inputs) {
+    for (const inp of q.inputs) {
+      const el = document.getElementById(q.id + '_' + inp.key);
+      if (el && el.value.trim() !== "") return true;
+    }
+  }
+  return false;
+}
+function refresh() {
+  let n = 0;
+  QUESTIONS.forEach(q => {
+    const card = document.querySelector('.card[data-qid="' + q.id + '"]');
+    const ok = isAnswered(q);
+    card.classList.toggle("answered", ok);
+    if (ok) n++;
+    if (q.other) {
+      const o = document.getElementById(q.id + "_other");
+      const box = document.getElementById(q.id + "_otherbox");
+      if (o && box) box.classList.toggle("show", o.checked);
+    }
+  });
+  document.getElementById("pcount").textContent = n;
+  document.getElementById("pfill").style.width = (n / total * 100) + "%";
+}
+surveyEl.addEventListener("change", ()=>{refresh(); saveState();});
+surveyEl.addEventListener("input", ()=>{refresh(); saveState();});
+refresh();
+
+/* ============ البوابة ============ */
 (function(){
   const gate=document.getElementById("gate"),box=document.getElementById("gateBox"),
         pin=document.getElementById("gatePin"),btn=document.getElementById("gateBtn"),err=document.getElementById("gateError");
   function go(){
     let ok=false; try{ok=(pin.value.trim()===atob(PIN_B64));}catch(e){}
     if(ok){gate.classList.add("hidden");}
-    else{err.textContent="الرقم تم تغييره  — أطلبه مرة أخرى";box.classList.remove("shake");void box.offsetWidth;box.classList.add("shake");pin.value="";pin.focus();}
+    else{err.textContent="الرقم غير صحيح — حاول مرة أخرى";box.classList.remove("shake");void box.offsetWidth;box.classList.add("shake");pin.value="";pin.focus();}
   }
   btn.addEventListener("click",go);
   pin.addEventListener("keydown",e=>{if(e.key==="Enter")go();});
 })();
 
-/* الحالة والحفظ المحلي */
-let state={approved:{},notes:{}};
-try{const s=localStorage.getItem(LS_KEY); if(s) state=JSON.parse(s);}catch(e){}
-function save(){try{localStorage.setItem(LS_KEY,JSON.stringify(state));}catch(e){}}
-
-function refresh(){
-  let done=0;
-  for(let i=1;i<=TOTAL;i++){
-    const card=document.querySelector('.card[data-sec="'+i+'"]');
-    const hasNote=(state.notes[i]||"").trim()!=="";
-    card.classList.toggle("approved",!!state.approved[i]);
-    card.classList.toggle("noted",hasNote);
-    if(state.approved[i]||hasNote) done++;
-  }
-  document.getElementById("pc").textContent=done;
-  document.getElementById("pf").style.width=(done/TOTAL*100)+"%";
-}
-document.getElementById("ptot").textContent=TOTAL;
-
-/* استرجاع الملاحظات المحفوظة */
-document.querySelectorAll(".note-box textarea").forEach(t=>{
-  const i=t.dataset.sec;
-  if(!i) return; /* البطاقة العامة لها منطقها الخاص */
-  if(state.notes[i]){t.value=state.notes[i];document.getElementById("note"+i).classList.add("show");}
-  t.addEventListener("input",()=>{state.notes[i]=t.value;save();refresh();});
-});
-document.querySelectorAll(".btn-approve").forEach(b=>{
-  b.addEventListener("click",()=>{const i=b.dataset.sec;state.approved[i]=!state.approved[i];save();refresh();});
-});
-document.querySelectorAll(".btn-note").forEach(b=>{
-  if(!b.dataset.sec) return; /* البطاقة العامة لها منطقها الخاص */
-  b.addEventListener("click",()=>{
-    const i=b.dataset.sec,box=document.getElementById("note"+i);
-    box.classList.toggle("show");
-    if(box.classList.contains("show"))box.querySelector("textarea").focus();
+/* ============ الملخص ============ */
+function buildSummary() {
+  const L = [];
+  L.push("📋 *استيضاحات فارس النهائية — قبل بدء البناء*");
+  L.push("التاريخ: " + new Date().toLocaleDateString("ar-SA")); L.push("");
+  const missing = [];
+  QUESTIONS.forEach((q, i) => {
+    L.push("*" + (i+1) + ". " + q.title + "*");
+    let parts = [];
+    if (q.type === "single" || q.type === "multi") {
+      [...document.querySelectorAll('input[name="' + q.id + '"]:checked')].forEach(c=>{
+        if (c.value === "__other__") {
+          const tx = document.getElementById(q.id + "_othertext");
+          parts.push("أخرى: " + (tx && tx.value.trim() ? tx.value.trim() : "(بلا تفاصيل)"));
+        } else parts.push(c.value);
+      });
+    }
+    if (q.inputs) q.inputs.forEach(inp=>{
+      const el = document.getElementById(q.id + '_' + inp.key);
+      if (el && el.value.trim() !== "") parts.push(inp.label.split("(")[0].trim() + ": " + el.value.trim());
+    });
+    if (parts.length === 0) { L.push("الجواب: — لم يُجب —"); missing.push(i+1); }
+    else L.push("الجواب: " + parts.join(" | "));
+    L.push("");
   });
-});
-refresh();
-
-/* الملاحظات العامة خارج الأقسام */
-(function(){
-  const gBtn=document.getElementById("gBtn"),gBox=document.getElementById("gBox"),
-        gTa=document.getElementById("gTa"),gCard=document.getElementById("generalCard");
-  if(state.general){gTa.value=state.general;gBox.classList.add("show");gCard.classList.add("noted");}
-  gBtn.addEventListener("click",()=>{gBox.classList.toggle("show");if(gBox.classList.contains("show"))gTa.focus();});
-  gTa.addEventListener("input",()=>{state.general=gTa.value;save();gCard.classList.toggle("noted",gTa.value.trim()!=="");});
-})();
-
-/* بناء الملخص */
-function buildSummary(){
-  const L=[];
-  L.push("📋 *مراجعة فارس — مشروع نظام الورشة*");
-  L.push("التاريخ: "+new Date().toLocaleDateString("ar-SA"));L.push("");
-  const ok=[],notes=[],skipped=[];
-  for(let i=1;i<=TOTAL;i++){
-    const n=(state.notes[i]||"").trim();
-    if(state.approved[i]) ok.push(i+". "+TITLES[i-1]);
-    if(n) notes.push({i,t:TITLES[i-1],n});
-    if(!state.approved[i]&&!n) skipped.push(i);
-  }
-  if(ok.length){L.push("✅ *أقسام معتمدة ("+ok.length+"):*");ok.forEach(x=>L.push("• "+x));L.push("");}
-  if(notes.length){L.push("✍️ *الملاحظات ("+notes.length+"):*");
-    notes.forEach(x=>{L.push("");L.push("📍 القسم "+x.i+" — "+x.t+":");L.push("«"+x.n+"»");});L.push("");}
-  const g=(state.general||"").trim();
-  if(g){L.push("🗒 *ملاحظات عامة خارج الأقسام:*");L.push("«"+g+"»");L.push("");}
-  if(skipped.length)L.push("⏭ أقسام لم تُراجع بعد: ("+skipped.join("، ")+")");
-  return L.join("\n");
+  return {text: L.join("\n"), missing};
 }
-document.getElementById("btnWa").addEventListener("click",()=>{
-  const base=WHATSAPP_TO?"https://wa.me/"+WHATSAPP_TO+"?text=":"https://wa.me/?text=";
-  window.open(base+encodeURIComponent(buildSummary()),"_blank");
+function warnMissing(m) {
+  const n = document.getElementById("missingNote");
+  if (m.length) { n.textContent = "⚠ الأسئلة (" + m.join("، ") + ") بلا إجابة — يمكنك الإرسال وإكمالها لاحقًا."; n.classList.add("show"); }
+  else n.classList.remove("show");
+}
+document.getElementById("btnWa").addEventListener("click", ()=>{
+  const {text, missing} = buildSummary(); warnMissing(missing);
+  const base = WHATSAPP_TO ? "https://wa.me/" + WHATSAPP_TO + "?text=" : "https://wa.me/?text=";
+  window.open(base + encodeURIComponent(text), "_blank");
 });
-document.getElementById("btnCopy").addEventListener("click",async()=>{
-  const t=buildSummary();
-  try{await navigator.clipboard.writeText(t);showToast();}
-  catch(e){const ta=document.createElement("textarea");ta.value=t;document.body.appendChild(ta);ta.select();
-    try{document.execCommand("copy");showToast();}catch(_){ }document.body.removeChild(ta);}
+document.getElementById("btnCopy").addEventListener("click", async ()=>{
+  const {text, missing} = buildSummary(); warnMissing(missing);
+  try { await navigator.clipboard.writeText(text); showToast(); }
+  catch(e){ const ta=document.createElement("textarea"); ta.value=text; document.body.appendChild(ta); ta.select();
+    try{document.execCommand("copy");showToast();}catch(_){} document.body.removeChild(ta); }
 });
-document.getElementById("btnView").addEventListener("click",()=>{
-  document.getElementById("previewText").textContent=buildSummary();
+document.getElementById("btnView").addEventListener("click", ()=>{
+  const {text, missing} = buildSummary(); warnMissing(missing);
+  document.getElementById("previewText").textContent = text;
   document.getElementById("preview").classList.toggle("show");
 });
-function showToast(){const t=document.getElementById("toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);}
+function showToast(){ const t=document.getElementById("toast"); t.classList.add("show"); setTimeout(()=>t.classList.remove("show"),2200); }
 </script>
 </body>
 </html>
